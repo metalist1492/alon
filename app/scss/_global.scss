@@ -6,7 +6,7 @@ body {
 body{
   font-size: 15px;
   line-height: 26px;
-  color: $default;
+  color: $title2-black;
   background-color: #fff;
   @extend %OpenSans-700;
   display: flex;
@@ -29,4 +29,56 @@ body{
   max-width: 1170px;
   padding: 0 15px;
   margin: 0 auto;
+}
+
+.pagination{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 150px;
+  &__list{
+    display: flex;
+    margin: 0 80px;
+  }
+
+  &__item + .pagination__item{
+    margin-left: 8px;
+  }
+  
+  &__link{
+    width: 64px;
+    height: 64px;
+    background-color: $bg2;
+    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    font-size: 15px;
+    line-height: 175%;
+    color: $title2-black;
+    border: 1px solid rgba($color: $accent1, $alpha: 0);
+    transition: all .3s;
+    @extend %OpenSans-700;
+    &:hover{
+      color: $accent1;
+      border: 1px solid rgba($color: $accent1, $alpha: 1);
+    }
+  }
+  &__arrows {
+    width: 64px;
+    height: 64px;
+    background-color: $bg2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba($color: $accent1, $alpha: 0);
+    transition: all .3s;
+    &:hover{
+      border: 1px solid rgba($color: $accent1, $alpha: 1);
+      path{
+        fill: $accent1;
+      }
+    }
+  }
+
 }

@@ -4,6 +4,9 @@
 @import 'libs';
 @import 'global';
 
+
+
+//Payment page
 .header{
   background-image: url('../images/header-bg.jpg');
   background-size: cover;
@@ -15,7 +18,7 @@
     justify-content: space-between;
     align-items: center;
     padding-top: 32px;
-    margin-bottom: 64px;
+    
   }
   .menu__list{
     display: flex;
@@ -27,7 +30,7 @@
       color: inherit;
       transition: all .3s;
       &:hover{
-        color: $link;
+        color: $accent1;
       }
     }
     &-btn{
@@ -42,6 +45,7 @@
     letter-spacing: -0.02em;
     max-width: 594px;
     margin: 0 auto;
+    margin-top: 64px;
     @extend %CormorantGaramond-400;
   }
 }
@@ -58,7 +62,7 @@
   max-width: 314px;
   width: 100%;
   height: 414px;
-  border: 1px solid #F5F2EF;
+  border: 1px solid $bg2;
   background-color: #fff;
   padding: 71px 0 64px;
   text-align: center;
@@ -81,6 +85,7 @@
     letter-spacing: -0.01em;
     font-feature-settings: 'pnum' on, 'lnum' on;
     min-height: 90px;
+    color: $title;
     @extend %CormorantGaramond-400;
     span{
       margin-left: -10px;
@@ -92,7 +97,7 @@
     }
   }
   &__economy{
-    color: $accent;
+    color: $accent2;
     font-size: 15px;
     line-height: 26px;
     @extend %OpenSans-700;
@@ -114,14 +119,14 @@
     max-width: 314px;
     width: 100%;
     height: 462px;
-    border: 1px solid $accent;
+    border: 1px solid $accent2;
     position: absolute;
     left: 0;
     top: -25px;
   }
   .price-item__text{
     color: #fff;
-    background-color: $accent;
+    background-color: $accent2;
     padding: 10px 0;
   }
 }
@@ -143,7 +148,7 @@
   text-align: center;
   &__inner{
     padding: 38px 0;
-    background-color: #F5F2EF;
+    background-color: $bg2;
   }
   &-title{
     
@@ -207,7 +212,7 @@
     margin-bottom: 84px;
   }
   &__team-item__img{
-    margin-bottom: 12px;
+    margin: 0 auto 12px;
     border-radius: 50%;
   }
   &__team-item__text{
@@ -233,9 +238,6 @@
     margin-bottom: 24px;
     @extend %CormorantGaramond-400;
   }
-  &__headmember-img{
-    margin: 0 auto;
-  }
   &__headmember-text{
     max-width: 435px;
     margin: 0 auto;
@@ -244,7 +246,7 @@
 }
 
 .footer{
-  background-color: $default;
+  background-color: $title2-black;
   padding: 55px 0 54px;
   &__inner{
     display: flex;
@@ -265,5 +267,57 @@
     margin-left: 8px;
   }
 }
+
+
+
+//Resources
+.header-content__resources{
+  .header-title{
+    margin-top: 164px;
+  }
+}
+
+.resources{
+  margin-top: -108px;
+  margin-bottom: 72px;
+  &-inner{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 64px 32px;
+  }
+  &-item{
+    max-width: 359px;
+    width: 100%;
+  }
+  &-item__imgbox{
+    margin-bottom: 24px;
+  }
+  &-item__date{
+    font-size: 13px;
+    line-height: 150%;
+    opacity: 0.5;
+    @extend %OpenSans-400;
+  }
+  &-item__title{
+    font-size: 24px;
+    line-height: 165%;
+    margin-bottom: 8px;
+  }
+  &-item__title-link{
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
+    text-decoration: none;
+  }
+  &-item__text{
+    font-size: 15px;
+    line-height: 175%;
+    @extend %OpenSans-400;
+  }
+}
+
+
+
+
 
 @import 'media';

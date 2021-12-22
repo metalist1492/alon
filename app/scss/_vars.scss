@@ -1,8 +1,9 @@
 $title: #583D2B;
-$default: #100F0A;
-$accent: #71A364;
-$link: #FF862F;
+$title2-black: #100F0A;
+$accent1: #FF862F;
+$accent2: #71A364;
 $bg: #F6E7DA;
+$bg2: #F5F2EF;
 
 
 %CormorantGaramond-700{
@@ -27,8 +28,8 @@ $bg: #F6E7DA;
 
 %btn{
   border: none;
-  background-color: $link;
+  background-color: $accent1;
   color: #fff;
-  padding: 7px 24px;
+  padding: 10px 24px;
   cursor: pointer;
 }
