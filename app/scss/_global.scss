@@ -31,6 +31,45 @@ body{
   margin: 0 auto;
 }
 
+.breadcrumbs{
+  display: flex;
+  justify-content: center;
+  margin-top: 56px;
+  &__list{
+    display: flex;
+    
+  }
+  &__item{
+    color: $accent1;
+    position: relative;
+    padding-right: 10px;
+    &::after{
+      content: '/';
+      position: absolute;
+      top: 0px;
+      right: 3px;
+      @extend %OpenSans-400;
+    }
+    &:last-child{
+      color: $title2-black;
+      &::after{
+        display: none;
+      }
+    }
+  }
+  &__link{
+    font-size: 15px;
+    line-height: 175%;
+    color: inherit;
+    
+    margin-right: 5px;
+    
+    @extend %OpenSans-400;
+    
+  }
+}
+
+
 .pagination{
   display: flex;
   justify-content: center;

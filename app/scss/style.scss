@@ -33,6 +33,9 @@
         color: $accent1;
       }
     }
+    &-link--active{
+      color: $accent1;
+    }
     &-btn{
       @extend %btn;
     }
@@ -316,6 +319,168 @@
   }
 }
 
+
+//Blog
+.header-content__blog{
+  .header-title{
+    margin-top: 16px;
+    min-width: 748px;
+    font-size: 64px;
+    line-height: 64px;
+  }
+  &-date{
+    margin-top: 24px;
+    text-align: center;
+    font-size: 13px;
+    line-height: 150%;
+    opacity: 0.5;
+    @extend %OpenSans-400;
+  }
+}
+.blog-top{
+  margin-top: -185px;
+  margin-bottom: 64px;
+  @extend %OpenSans-400;
+  &__img{
+    margin-bottom: 64px;
+  }
+  &__descr{
+    max-width: 750px;
+    margin: 0 auto;
+  }
+  &__text{
+    margin-bottom: 35px;
+  }
+  &__list{
+    list-style-type: disc;
+  }
+  ol.blog-top__list{
+    padding-left: 18px;
+  }
+  &__item{
+    margin-bottom: 24px;
+    span{
+      @extend %OpenSans-700;
+    }
+    &::marker{
+      color: $accent2;
+    }
+    &:first-child{
+      list-style: none;
+      margin-bottom: 24px;
+      margin-left: -20px;
+    }
+  }
+}
+.blog-receip{
+  margin-bottom: 120px;
+  &__title{
+    text-align: center;
+    font-size: 48px;
+    line-height: 115%;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: $title;
+    margin-bottom: 40px;
+    @extend %CormorantGaramond-400;
+  }
+  &__item{
+    margin-bottom: 80px;
+    @extend %OpenSans-400;
+  }
+  &__item-inner{
+    display: flex;
+  }
+  &__item-imgbox{
+    max-width: 455px;
+    width: 100%;
+    margin-right: 99px;
+  }
+  &__item-title{
+    font-size: 32px;
+    line-height: 115%;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: $title2-black;
+    margin-bottom: 24px;
+    @extend %CormorantGaramond-400;
+  }
+  &__item-holder{
+    display: flex;
+    margin-bottom: 24px;
+  }
+  &__item-time{
+    max-width: 150px;
+    width: 100%;
+    margin-right: 32px;
+    span{
+      @extend %OpenSans-700;
+    }
+  }
+  &__item-serving{
+    margin-bottom: 24px;
+    span{
+      display: block;
+      @extend %OpenSans-700;
+    }
+  }
+  &__item-ingredients__title{
+    margin-bottom: 8px;
+    display: block;
+    @extend %OpenSans-700;
+  }
+  &__item-ingredients__inner{
+    column-count: 2;
+    column-gap: 68px;
+    
+  }
+  &__item-list{
+    max-width: 258px;
+  }
+  ul.blog-receip__item-list{
+    padding-left: 17px;
+  }
+  &__item-excerpt{ 
+    list-style-type: disc;
+    margin-bottom: 35px;
+    &::marker{
+      color: $accent2;
+    }
+  }
+  &__item-instructions{
+    li{
+      list-style-type: decimal-leading-zero;
+      padding-left: 18px;
+      margin-bottom: 25px;
+      &::marker{
+        color: $accent2;
+        margin-right: 16px;
+        @extend %OpenSans-700;
+      }
+    }
+  }
+  &__item-instructions__title{
+      @extend %OpenSans-700;
+      margin-bottom: 8px;
+      display: block;
+  }
+  ol.blog-receip__item-instructions{
+    padding-left: 25px;
+  }
+}
+.blog-recent{
+  margin-bottom: 150px;
+  &__title{
+    font-size: 64px;
+    line-height: 100%;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    margin-bottom: 64px;
+    text-align: center;
+    @extend %CormorantGaramond-400;
+  }
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+  }
+}
 
 
 
