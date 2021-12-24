@@ -27,9 +27,15 @@ $bg2: #F5F2EF;
 }
 
 %btn{
-  border: none;
+  border: 1px solid rgba($color: $accent1, $alpha: 0);
   background-color: $accent1;
   color: #fff;
   padding: 10px 24px;
   cursor: pointer;
+  transition: all .5s;
+  &:hover{
+    background-color: transparent;
+    color: $accent1;
+    border: 1px solid rgba($color: $accent1, $alpha: 1);
+  }
 }

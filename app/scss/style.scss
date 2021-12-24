@@ -107,7 +107,7 @@
   }
   &__btn{
     @extend %btn;
-    padding: 19px 56px;
+    padding: 18px 0;
     width: 197px;
     margin: 0 auto;
     z-index: 9;
@@ -305,6 +305,10 @@
     font-size: 24px;
     line-height: 165%;
     margin-bottom: 8px;
+    transition: all .3s;
+    &:hover{
+      color: $accent1;
+    }
   }
   &-item__title-link{
     font-size: inherit;
@@ -316,6 +320,13 @@
     font-size: 15px;
     line-height: 175%;
     @extend %OpenSans-400;
+  }
+  &-item__link{
+    @extend %btn;
+    margin: 64px auto 0;
+    width: 205px;
+    display: block;
+    padding: 18px 55px;
   }
 }
 
@@ -474,6 +485,7 @@
     font-feature-settings: 'pnum' on, 'lnum' on;
     margin-bottom: 64px;
     text-align: center;
+    color: $title;
     @extend %CormorantGaramond-400;
   }
   &__inner{
@@ -481,7 +493,309 @@
     justify-content: space-between;
   }
 }
-
+//main
+.header-main{
+  min-height: 860px;
+  height: 100%;
+  position: relative;
+  .header-title{
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 32px;
+  }
+  .header-content{
+    display: flex;
+    margin-top: 71px;
+    &__box{
+    max-width: 515px;
+    }
+    &__boximg{
+      align-self: end;
+    }
+    &__box-text{
+      font-size: 24px;
+      line-height: 165%;
+      margin-bottom: 49px;
+      @extend %OpenSans-400;
+      span{
+        @extend %OpenSans-700;
+        border-bottom: 2px solid $accent2;
+      }
+    }
+    &__box-inner{
+      display: flex;
+      margin-bottom: 79px;
+    }
+    &__box-btn{
+      margin-right: 30px;
+      @extend %btn;
+      padding: 18px 0;
+      width: 197px;
+      text-align: center;
+    }
+    &__box-descr{
+      font-size: 13px;
+      line-height: 150%;
+      max-width: 205px;
+      @extend %OpenSans-400;
+      span{
+        @extend %OpenSans-700;
+      }
+    }
+    &__box-review{
+      @extend %OpenSans-400;
+      position: relative;
+      span{
+        display: block;
+        margin-top: 16px;
+        @extend %OpenSans-700;
+      }
+      &::before{
+        content: '';
+        position: absolute;
+        width: 51px;
+        height: 40px;
+        left: -25px;
+        top: -15px;
+        background-image: url('../images/decore/1.svg');
+        z-index: 9;
+      }
+    }
+  }
+  .header-stats{
+    background-color: #fff;
+    max-width: 899px;
+    width: 100%;
+    padding: 40px 150px 42px 64px;
+    position: absolute;
+    right: 0;
+    bottom: -89px;
+    &__inner{
+      display: flex;
+      justify-content: space-between;
+    }
+    &__item{
+      padding-left: 50px;
+      position: relative;
+      &::before{
+        content: '';
+        position: absolute;
+        left: 22px;
+        top: 0;
+        width: 1px;
+        height: 100%;
+        background-color: $bg;
+      }
+      &:first-child{
+        &::before{
+          display: none;
+        }
+      }
+    }
+    &__item__num{
+      max-width: 157px;
+      font-size: 64px;
+      line-height: 100%;
+      font-feature-settings: 'pnum' on, 'lnum' on;
+      color: $accent2;
+      
+      @extend %CormorantGaramond-400;
+      span{
+        display: block;
+        font-size: 15px;
+        line-height: 175%;
+        color: $title2-black;
+        @extend %OpenSans-400;
+      }
+    }
+  }
+}
+.feel-supported{
+  padding-top: 247px;
+  padding-bottom: 150px;
+  background-color: $bg2;
+  &__inner{
+    display: flex;
+  }
+  &__imgbox{
+    position: relative;
+    max-width: 622px;
+    width: 100%;
+    height: 400px;
+    margin-right: 129px;
+    &::before{
+      content: '';
+      position: absolute;
+      bottom: -55px;
+      left: 15px;
+      width: 314px;
+      height: 181px;
+      background-image: url('../images/decore/2.svg');
+    }
+  }
+  &__content{
+    max-width: 359px;
+  }
+  &__title{
+    font-size: 64px;
+    line-height: 100%;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: $title;
+    margin-bottom: 24px;
+    @extend %CormorantGaramond-400;
+  }
+  &__text{
+    @extend %OpenSans-400;
+    margin-bottom: 48px;
+    span{
+      @extend %OpenSans-700;
+      border-bottom: 2px solid $accent2;
+    }
+  }
+  &__btn{
+    @extend %btn;
+  }
+}
+.guidance{
+  padding-bottom: 150px;
+  background-color: $bg2;
+  &__inner{
+    display: flex;
+  }
+  &__imgbox{
+    position: relative;
+    &::before{
+      content: '';
+      position: absolute;
+      bottom: 10px;
+      right: -153px;
+      width: 183px;
+      height: 308px;
+      background-image: url('../images/decore/3.svg');
+    }
+  }
+  &__img{
+    margin-left: 129px;
+  }
+  &__content{
+    max-width: 359px;
+    padding-top: 50px;
+  }
+  &__title{
+    font-size: 64px;
+    line-height: 100%;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: $title;
+    margin-bottom: 24px;
+    @extend %CormorantGaramond-400;
+  }
+  &__text{
+    @extend %OpenSans-400;
+    margin-bottom: 48px;
+    span{
+      @extend %OpenSans-700;
+      border-bottom: 2px solid $accent2;
+    }
+  }
+  &__btn{
+    @extend %btn;
+  }
+}
+.results{
+  background-color: $bg2;
+  padding-bottom: 208px;
+  &__inner{
+    display: flex;
+  }
+  &__imgbox{
+    position: relative;
+    &::before{
+      content: '';
+      position: absolute;
+      bottom: -125px;
+      left: 65px;
+      width: 188px;
+      height: 188px;
+      background-image: url('../images/decore/4.svg');
+      z-index: 99;
+    }
+  }
+  &__img{
+    margin-left: 129px;
+  }
+  &__title{
+    font-size: 64px;
+    line-height: 100%;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: $title;
+    margin-bottom: 24px;
+    @extend %CormorantGaramond-400;
+  }
+  &__content{
+    max-width: 359px;
+    margin: 0 auto;
+    padding-top: 80px;
+  }
+  &__text{
+    @extend %OpenSans-400;
+    margin-bottom: 48px;
+    span{
+      @extend %OpenSans-700;
+      border-bottom: 2px solid $accent2;
+    }
+  }
+  &__btn{
+    @extend %btn;
+  }
+}
+.price-items__main{
+  padding: 150px 0;
+  .price-items__inner{
+    margin-top: 0;
+  }
+  .price-items__main-title{
+    font-size: 64px;
+    line-height: 100%;
+    text-align: center;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: $title;
+    margin-bottom: 64px;
+    @extend %CormorantGaramond-400;
+  }
+}
+.start{
+  background-color: $bg;
+  padding-top: 96px;
+  padding-bottom: 82px;
+  &-inner__title{
+    font-size: 64px;
+    line-height: 100%;
+    text-align: center;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: $title;
+    margin-bottom: 24px;
+    @extend %CormorantGaramond-400;
+  }
+  &-inner__text{
+    font-size: 24px;
+    line-height: 165%;
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto 40px;
+    @extend %OpenSans-400;
+    span{
+      @extend %OpenSans-700;
+      border-bottom: 2px solid $accent2;
+    }
+  }
+  &-inner__btn{
+    @extend %btn;
+    width: 197px;
+    margin: 0 auto;
+    display: block;
+    padding: 18px 55px;
+  }
+}
 
 
 
