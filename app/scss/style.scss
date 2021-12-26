@@ -1155,17 +1155,16 @@
     @extend %CormorantGaramond-400;
   }
   .typical-week__inner{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-gap: 48px 0;
+    display: flex;
+    justify-content: space-between;
     
   } 
   .typical-week__text{
     padding-left: 31px;
     position: relative;
     max-width: 348px;
-    // margin-bottom: 78px;
+    margin-bottom: 48px;
+    min-height: 90px;
     &::before{
       position: absolute;
       content: '';
@@ -1177,5 +1176,96 @@
     }
   }
 }
+.about-img{
+  background-color: $bg2;
+  img{
+    margin: 0 auto;
+  }
+  &__inner{
+    position: relative;
+    &::before{
+      content: '';
+      position: absolute;
+      width: 1140px;
+      height: 688px;
+      top: -130px;
+      left: -145px;
+      background-image: url('../images/decore/about.svg');
+    }
+  }
+  &__btn-inner{
+    position: absolute;
+    right: -100px;
+    bottom: 290px;
+  }
+  &__btn{
+    @extend %btn;
+    width: 287px;
+    height: 64px;
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    &::before{
+      position: absolute;
+      content: '';
+      top: 50%;
+      transform: translateY(-50%);
+      right: 10px;
+      width: 46.5px;
+      height: 8px;
+      background-image: url('../images/icons/arrow-white.svg');
+    }
+  }
+}
+.interact{
+  padding: 96px 0 84px;
+  background-color: $bg;
+  &__inner{
+    position: relative;
+  &:before{
+      content: '';
+      position: absolute;
+      right: -80px;
+      top: -55px;
+      width: 188px;
+      height: 188px;
+      z-index: 999;
+      background-image: url('../images/decore/finish.svg');
+    }
+  
+  }
+  &-title{
+    text-align: center;
+    font-size: 64px;
+    line-height: 100%;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: $title;
+    max-width: 750px;
+    margin: 0 auto 24px;
+    @extend %CormorantGaramond-400;
+  }
+  &-text{
+    font-size: 24px;
+    line-height: 165%;
+    text-align: center;
+    max-width: 886px;
+    margin: 0 auto 40px;
+    @extend %OpenSans-400;
+    span{
+      @extend %OpenSans-700;
+      border-bottom: 2px solid $accent2;
+    }
+  }
+  &-btn{
+    @extend %btn;
+    display: block;
+    margin: 0 auto;
+    width: 197px;
+    padding: 18px 55px;
+  }
+}
+
 
 @import 'media';
