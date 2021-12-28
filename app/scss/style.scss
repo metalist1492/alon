@@ -20,6 +20,9 @@
     padding-top: 32px;
     
   }
+  .menu__btn{
+    display: none;
+  }
   .menu__list{
     display: flex;
     align-items: center;
@@ -335,7 +338,7 @@
 .header-content__blog{
   .header-title{
     margin-top: 16px;
-    min-width: 748px;
+    max-width: 748px;
     font-size: 64px;
     line-height: 64px;
   }
@@ -1157,6 +1160,7 @@
   .typical-week__inner{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     
   } 
   .typical-week__text{

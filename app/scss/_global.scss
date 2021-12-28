@@ -34,10 +34,12 @@ body{
 .breadcrumbs{
   display: flex;
   justify-content: center;
+  
   margin-top: 56px;
   &__list{
     display: flex;
-    
+    flex-wrap: wrap;
+    justify-content: center;
   }
   &__item{
     color: $accent1;
